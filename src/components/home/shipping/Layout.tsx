@@ -1,6 +1,5 @@
 import React from 'react'
 import ShippingLayout from '.'
-import ShippingCard from './card/ShippingCard'
 
 const Shipping = () => {
 

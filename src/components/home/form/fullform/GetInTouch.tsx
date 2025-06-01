@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button"
 import {
     Form,
     FormControl,
-    FormDescription,
     FormField,
     FormItem,
     FormLabel,
@@ -16,19 +15,28 @@ import {
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 
+// Zod schema for form validation
 const formSchema = z.object({
-    username: z.string().min(2, {
-        message: "Username must be at least 2 characters.",
-    }),
+    contactreason: z.string().min(2, { message: "Reason for contact is required." }),
+    firstname: z.string().min(1, { message: "First name is required." }),
+    lastname: z.string().min(1, { message: "Last name is required." }),
+    email: z.string().email({ message: "Please enter a valid email." }),
+    phone: z.string().min(10, { message: "Phone number must be at least 10 characters." }),
+    company: z.string().min(2, { message: "Company name must be at least 2 characters." }),
+    region: z.string().min(1, { message: "Please select a region." }),
+    message: z.string().min(5, { message: "Message should be at least 5 characters." }),
 })
 
+// Type inferred from the form schema
+type FormData = z.infer<typeof formSchema>;
+
 export function GetInTouch() {
-    // ...
-    const form = useForm()
+    const form = useForm<FormData>({
+        resolver: zodResolver(formSchema),
+    })
 
-    const onSubmit = () => {
-
-
+    const onSubmit = (data: FormData) => {
+        console.log(data)
     }
 
     return (
@@ -45,11 +53,8 @@ export function GetInTouch() {
                             <FormItem>
                                 <FormLabel>Reason for Contact <span className="text-orange-600">*</span></FormLabel>
                                 <FormControl>
-                                    <Input className="" placeholder="Reason..." {...field} />
+                                    <Input placeholder="Reason..." {...field} />
                                 </FormControl>
-                                {/* <FormDescription>
-                                This is your public display name.
-                            </FormDescription> */}
                                 <FormMessage />
                             </FormItem>
                         )}
@@ -61,13 +66,10 @@ export function GetInTouch() {
                                 name="firstname"
                                 render={({ field }) => (
                                     <FormItem>
-                                        <FormLabel>First Nmae</FormLabel>
+                                        <FormLabel>First Name</FormLabel>
                                         <FormControl>
-                                            <Input className="" placeholder="First Name" {...field} />
+                                            <Input placeholder="First Name" {...field} />
                                         </FormControl>
-                                        {/* <FormDescription>
-                                This is your public display name.
-                            </FormDescription> */}
                                         <FormMessage />
                                     </FormItem>
                                 )}
@@ -79,11 +81,8 @@ export function GetInTouch() {
                                     <FormItem>
                                         <FormLabel>Last Name</FormLabel>
                                         <FormControl>
-                                            <Input className="" placeholder="Last Name" {...field} />
+                                            <Input placeholder="Last Name" {...field} />
                                         </FormControl>
-                                        {/* <FormDescription>
-                                This is your public display name.
-                            </FormDescription> */}
                                         <FormMessage />
                                     </FormItem>
                                 )}
@@ -97,11 +96,8 @@ export function GetInTouch() {
                                     <FormItem>
                                         <FormLabel>Enter Email</FormLabel>
                                         <FormControl>
-                                            <Input className=" text-start" placeholder="user11@gmail.com" {...field} />
+                                            <Input placeholder="user11@gmail.com" {...field} />
                                         </FormControl>
-                                        {/* <FormDescription>
-                                This is your public display name.
-                            </FormDescription> */}
                                         <FormMessage />
                                     </FormItem>
                                 )}
@@ -119,9 +115,6 @@ export function GetInTouch() {
                                         <FormControl>
                                             <Input placeholder="(201)555-01234" {...field} />
                                         </FormControl>
-                                        {/* <FormDescription>
-                                This is your public display name.
-                            </FormDescription> */}
                                         <FormMessage />
                                     </FormItem>
                                 )}
@@ -137,9 +130,6 @@ export function GetInTouch() {
                                         <FormControl>
                                             <Input placeholder="Micro Data Solutions..." {...field} />
                                         </FormControl>
-                                        {/* <FormDescription>
-                                This is your public display name.
-                            </FormDescription> */}
                                         <FormMessage />
                                     </FormItem>
                                 )}
@@ -151,13 +141,10 @@ export function GetInTouch() {
                         name="region"
                         render={({ field }) => (
                             <FormItem>
-                                <FormLabel>Primary Wharehouse Region?</FormLabel>
+                                <FormLabel>Primary Warehouse Region?</FormLabel>
                                 <FormControl>
                                     <Input placeholder="-Select-" {...field} />
                                 </FormControl>
-                                {/* <FormDescription>
-                                This is your public display name.
-                            </FormDescription> */}
                                 <FormMessage />
                             </FormItem>
                         )}
@@ -171,9 +158,6 @@ export function GetInTouch() {
                                 <FormControl>
                                     <Input placeholder="abc..." {...field} />
                                 </FormControl>
-                                {/* <FormDescription>
-                                This is your public display name.
-                            </FormDescription> */}
                                 <FormMessage />
                             </FormItem>
                         )}
@@ -184,6 +168,5 @@ export function GetInTouch() {
                 </div>
             </form>
         </Form>
-
     )
 }
