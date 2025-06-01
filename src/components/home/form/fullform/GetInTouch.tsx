@@ -33,7 +33,7 @@ export function GetInTouch() {
 
     return (
         <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-10 container mx-auto w-2/5 shadow-2xl p-8 rounded-2xl">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-10 my-10 container mx-auto w-2/5 shadow-2xl p-8 rounded-2xl">
                 <div className="flex justify-center items-center">
                     <h1 className="uppercase text-3xl text-orange-500 font-bold">Get In Touch</h1>
                 </div>
@@ -184,6 +184,6 @@ export function GetInTouch() {
                 </div>
             </form>
         </Form>
-        
+
     )
 }

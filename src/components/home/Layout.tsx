@@ -7,6 +7,8 @@ import MovingCards from './movingcards/MovingCards'
 import Footer from './footer/Footer'
 import { Button } from '../ui/button'
 import { GetInTouch } from './form/fullform/GetInTouch'
+import ContactUs from './form/fullform'
+import WharehouseLocation from './location'
 
 const HomePage = () => {
 
@@ -34,7 +36,12 @@ const HomePage = () => {
             <div>
                 <MovingCards />
             </div>
-
+            <div>
+                <ContactUs />
+            </div>
+            <div>
+                <WharehouseLocation />
+            </div>
             <div >
                 <Footer />
             </div>
