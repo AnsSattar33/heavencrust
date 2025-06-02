@@ -14,6 +14,7 @@ import {
     FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
+import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select"
 
 // Zod schema for form validation
 const formSchema = z.object({
@@ -53,7 +54,20 @@ export function GetInTouch() {
                             <FormItem>
                                 <FormLabel>Reason for Contact <span className="text-orange-600">*</span></FormLabel>
                                 <FormControl>
-                                    <Input className="text-sm p-1 md:text-xl" placeholder="Reason..." {...field} />
+                                    <Select {...field}>
+                                        <SelectTrigger className="w-full text-sm p-1 md:text-xl">
+                                            <SelectValue placeholder="Select Reason..." />
+                                        </SelectTrigger>
+                                        <SelectContent>
+                                            <SelectGroup className="bg-white w-full">
+                                                <SelectLabel>Contact Reasons</SelectLabel>
+                                                <SelectItem value="inquiry">General Inquiry</SelectItem>
+                                                <SelectItem value="feedback">Feedback</SelectItem>
+                                                <SelectItem value="support">Support</SelectItem>
+                                                <SelectItem value="other">Other</SelectItem>
+                                            </SelectGroup>
+                                        </SelectContent>
+                                    </Select>
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
@@ -68,7 +82,7 @@ export function GetInTouch() {
                                     <FormItem>
                                         <FormLabel>First Name</FormLabel>
                                         <FormControl>
-                                            <Input className="text-sm p-1 md:text-xl" placeholder="First Name" {...field} />
+                                            <Input className="text-sm p-1 md:text-lg" placeholder="First Name" {...field} />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
@@ -81,7 +95,7 @@ export function GetInTouch() {
                                     <FormItem>
                                         <FormLabel>Last Name</FormLabel>
                                         <FormControl>
-                                            <Input className="text-sm p-1 md:text-xl" placeholder="Last Name" {...field} />
+                                            <Input className="text-sm p-1 md:text-lg" placeholder="Last Name" {...field} />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
@@ -96,7 +110,7 @@ export function GetInTouch() {
                                     <FormItem>
                                         <FormLabel>Enter Email</FormLabel>
                                         <FormControl>
-                                            <Input className="text-sm p-1 md:text-xl" placeholder="user11@gmail.com" {...field} />
+                                            <Input className="text-sm p-1 md:text-lg" placeholder="user11@gmail.com" {...field} />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
@@ -113,7 +127,7 @@ export function GetInTouch() {
                                     <FormItem>
                                         <FormLabel>Phone</FormLabel>
                                         <FormControl>
-                                            <Input className="text-sm p-1 md:text-xl" placeholder="(201)555-01234" {...field} />
+                                            <Input className="text-sm p-1 md:text-lg" placeholder="(201)555-01234" {...field} />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
@@ -128,7 +142,7 @@ export function GetInTouch() {
                                     <FormItem>
                                         <FormLabel>Company Name</FormLabel>
                                         <FormControl>
-                                            <Input className="text-sm p-1 md:text-xl" placeholder="Micro Data Solutions..." {...field} />
+                                            <Input className="text-sm p-1 md:text-lg" placeholder="Micro Data Solutions..." {...field} />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
@@ -143,7 +157,20 @@ export function GetInTouch() {
                             <FormItem>
                                 <FormLabel>Primary Warehouse Region?</FormLabel>
                                 <FormControl>
-                                    <Input className="text-sm p-1 md:text-xl" placeholder="-Select-" {...field} />
+                                    <Select {...field}>
+                                        <SelectTrigger className="w-full text-sm p-1 md:text-xl">
+                                            <SelectValue placeholder="-Select-" />
+                                        </SelectTrigger>
+                                        <SelectContent>
+                                            <SelectGroup className="bg-white w-full">
+                                                <SelectLabel>Warehouse Regions</SelectLabel>
+                                                <SelectItem value="north">North</SelectItem>
+                                                <SelectItem value="south">South</SelectItem>
+                                                <SelectItem value="east">East</SelectItem>
+                                                <SelectItem value="west">West</SelectItem>
+                                            </SelectGroup>
+                                        </SelectContent>
+                                    </Select>
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
@@ -156,7 +183,7 @@ export function GetInTouch() {
                             <FormItem>
                                 <FormLabel>Message</FormLabel>
                                 <FormControl>
-                                    <Input className="text-sm p-1 md:text-xl" placeholder="abc..." {...field} />
+                                    <Input className="text-sm p-1 md:text-lg" placeholder="abc..." {...field} />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
