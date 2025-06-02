@@ -29,7 +29,7 @@ const Footer = () => {
                     {/* Right Section (Social Media Icons) */}
                     <div className="w-full md:w-1/3">
                         <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
-                        <div className="flex space-x-6">
+                        <div className="">
                             <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-facebook-f"></i> Facebook</a>
                             <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-twitter"></i> Twitter</a>
                             <a href="#" className="text-gray-400 hover:text-white"><i className="fab fa-instagram"></i> Instagram</a>

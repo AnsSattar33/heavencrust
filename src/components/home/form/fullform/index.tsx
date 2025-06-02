@@ -3,8 +3,8 @@ import { GetInTouch } from './GetInTouch'
 
 const ContactUs = () => {
     return (
-        <div className='container mx-auto space-y-8'>
-            <h1 className='text-5xl font-bold text-orange-500'>Contact Us</h1>
+        <div className='md:container md:mx-auto px-3 space-y-8'>
+            <h1 className='md:text-5xl text-3xl font-bold text-orange-500'>Contact Us</h1>
             <GetInTouch />
         </div>
     )

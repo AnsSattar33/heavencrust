@@ -89,12 +89,12 @@ const ShippingLayout = () => {
     ]
 
     return (
-        <div className='flex py-20 container mx-auto px-4 flex-col gap-4'>
+        <div className='flex py-10 md:py-20 container mx-auto px-4 md:flex-col gap-4'>
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
-                <div className='w-1/2'>
+                <div className='w-full md:w-1/2'>
                     <ShippingInfo />
                 </div>
-                <div className='w-1/2'>
+                <div className='w-full md:w-1/2'>
                     {
                         shippingCardData.map((card) => (
                             <div key={card.id} className="p-2">

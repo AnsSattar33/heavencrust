@@ -44,9 +44,9 @@ const MovingCards = () => {
     ];
 
     return (
-        <div className='mx-auto container my-20 bg-gray-100'>
+        <div className='md:mx-auto md:container px-3 md:my-20 my-10 bg-gray-100'>
             <div>
-                <h1 className='text-5xl font-bold text-orange-500 my-10'>What We DO</h1>
+                <h1 className='md:text-5xl text-3xl font-bold text-orange-500 my-10'>What We DO</h1>
             </div>
             <div>
                 <InfiniteMovingCards items={items} className='' />

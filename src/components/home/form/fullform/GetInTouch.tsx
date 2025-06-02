@@ -41,9 +41,9 @@ export function GetInTouch() {
 
     return (
         <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-10 my-10 container mx-auto w-2/5 shadow-2xl p-8 rounded-2xl">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-10 my-10 container mx-auto md:w-2/5 w-5/6 shadow-2xl p-4 md:p-8 rounded-2xl">
                 <div className="flex justify-center items-center">
-                    <h1 className="uppercase text-3xl text-orange-500 font-bold">Get In Touch</h1>
+                    <h1 className="uppercase text-xl md:text-3xl text-orange-500 font-bold">Get In Touch</h1>
                 </div>
                 <div className="space-y-10">
                     <FormField
@@ -53,14 +53,14 @@ export function GetInTouch() {
                             <FormItem>
                                 <FormLabel>Reason for Contact <span className="text-orange-600">*</span></FormLabel>
                                 <FormControl>
-                                    <Input placeholder="Reason..." {...field} />
+                                    <Input className="text-sm p-1 md:text-xl" placeholder="Reason..." {...field} />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
                         )}
                     />
-                    <div className="flex justify-start gap-2 items-center">
-                        <div className="w-1/2 flex items-center gap-2">
+                    <div className="flex md:flex-row flex-col justify-start gap-2 items-center">
+                        <div className="md:w-1/2 flex items-center gap-2">
                             <FormField
                                 control={form.control}
                                 name="firstname"
@@ -68,7 +68,7 @@ export function GetInTouch() {
                                     <FormItem>
                                         <FormLabel>First Name</FormLabel>
                                         <FormControl>
-                                            <Input placeholder="First Name" {...field} />
+                                            <Input className="text-sm p-1 md:text-xl" placeholder="First Name" {...field} />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
@@ -81,14 +81,14 @@ export function GetInTouch() {
                                     <FormItem>
                                         <FormLabel>Last Name</FormLabel>
                                         <FormControl>
-                                            <Input placeholder="Last Name" {...field} />
+                                            <Input className="text-sm p-1 md:text-xl" placeholder="Last Name" {...field} />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
                                 )}
                             />
                         </div>
-                        <div className="w-1/2">
+                        <div className="md:w-1/2 w-full">
                             <FormField
                                 control={form.control}
                                 name="email"
@@ -96,7 +96,7 @@ export function GetInTouch() {
                                     <FormItem>
                                         <FormLabel>Enter Email</FormLabel>
                                         <FormControl>
-                                            <Input placeholder="user11@gmail.com" {...field} />
+                                            <Input className="text-sm p-1 md:text-xl" placeholder="user11@gmail.com" {...field} />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
@@ -104,8 +104,8 @@ export function GetInTouch() {
                             />
                         </div>
                     </div>
-                    <div className="flex justify-between items-center gap-2">
-                        <div className="w-1/2">
+                    <div className="flex md:flex-row flex-col justify-between items-center gap-2">
+                        <div className="md:w-1/2 w-full">
                             <FormField
                                 control={form.control}
                                 name="phone"
@@ -113,14 +113,14 @@ export function GetInTouch() {
                                     <FormItem>
                                         <FormLabel>Phone</FormLabel>
                                         <FormControl>
-                                            <Input placeholder="(201)555-01234" {...field} />
+                                            <Input className="text-sm p-1 md:text-xl" placeholder="(201)555-01234" {...field} />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
                                 )}
                             />
                         </div>
-                        <div className="w-1/2">
+                        <div className="md:w-1/2 w-full">
                             <FormField
                                 control={form.control}
                                 name="company"
@@ -128,7 +128,7 @@ export function GetInTouch() {
                                     <FormItem>
                                         <FormLabel>Company Name</FormLabel>
                                         <FormControl>
-                                            <Input placeholder="Micro Data Solutions..." {...field} />
+                                            <Input className="text-sm p-1 md:text-xl" placeholder="Micro Data Solutions..." {...field} />
                                         </FormControl>
                                         <FormMessage />
                                     </FormItem>
@@ -143,7 +143,7 @@ export function GetInTouch() {
                             <FormItem>
                                 <FormLabel>Primary Warehouse Region?</FormLabel>
                                 <FormControl>
-                                    <Input placeholder="-Select-" {...field} />
+                                    <Input className="text-sm p-1 md:text-xl" placeholder="-Select-" {...field} />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
@@ -156,7 +156,7 @@ export function GetInTouch() {
                             <FormItem>
                                 <FormLabel>Message</FormLabel>
                                 <FormControl>
-                                    <Input placeholder="abc..." {...field} />
+                                    <Input className="text-sm p-1 md:text-xl" placeholder="abc..." {...field} />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>

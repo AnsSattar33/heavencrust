@@ -19,15 +19,15 @@ const ShippingCard: React.FC<Props> = ({ imgDescription, imgHeading, imgIcon }) 
 
     return (
         <div className="flex justify-between items-center rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-            <div className='bg-orange-500 p-4'>
+            <div className='bg-orange-500 p-6 md:p-4'>
                 {/* <Image src={imgSrc} alt={imgAlt} width={imgWidth} height={imgHeight} loading='lazy' /> */}
                 <div className='flex items-center justify-center'>
                     {imgIcon}
                 </div>
             </div>
-            <div className='p-2 bg-white w-full flex flex-col items-start px-10 '>
+            <div className='md:p-2 bg-white w-full flex flex-col items-start px-10 '>
                 <div>
-                    <h1 className="text-xl font-semibold">{imgHeading}</h1>
+                    <h1 className="md:text-xl text-base font-semibold">{imgHeading}</h1>
                 </div>
                 <div>
                     <p>{imgDescription}</p>

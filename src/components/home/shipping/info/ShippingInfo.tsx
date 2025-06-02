@@ -6,18 +6,18 @@ const ShippingInfo = () => {
     return (
         <div className='flex flex-col items-start justify-center bg-gray-100 p-8 space-y-6'>
             <div className='self-start'>
-                <h1 className='text-6xl uppercase font-bold text-orange-500 leading-tight'>
+                <h1 className='text-3xl md:text-6xl uppercase font-bold text-orange-500 leading-tight'>
                     <span className="block">The Shipping </span>
                     <span className='block'></span>
                     <span className="block">Solution For You</span>
                 </h1>
             </div>
-            <div className='selft-center text-xl w-4/6'>
+            <div className='selft-center text-xl md:w-4/6'>
                 <p>As e-commerce founders ourselves, we’ve felt the frustration of dealing with surprise fees, and late shipments. That’s why we built Flat Fee Shipping: A 3PL experience that actually works for growing brands.</p>
             </div>
             <div className='flex flex-col items-start justify-center space-y-4 w-full'>
                 <div className='self-start'>
-                    <h3 className='text-3xl font-bold uppercase opacity-40'>Shipping Made Easy</h3>
+                    <h3 className='md:text-3xl text-2xl font-bold uppercase opacity-40'>Shipping Made Easy</h3>
                 </div>
                 <div className="flex flex-col gap-4 justify-center items-center">
                     <div className='flex items-center justify-between w-full'>
